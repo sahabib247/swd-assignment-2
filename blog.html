@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body style="background-color: rgb(183, 179, 206);">
+    <div class="faq-container">
+        <button class="accordion"><b>Discuss the scope of var, let and const</b></button>
+        <div class="panel">
+            <b>VAR:</b>
+            <ul>
+                <li>
+                    <p>Function-scoped variables, declared by 'var', are only visible inside the function in which they are declared. Global variables are those that are declared outside of any function.</p>
+                </li>
+                <li>
+                    <p>'var' variables are hoisted, which means that during compilation, the declaration is moved to the top of the function or global context. The initialization is still in effect, though.
+                    </p>
+                </li>
+            </ul>
+            <b>LET:</b>
+            <ul>
+                <li>
+                    <p>'let'-declared variables are block-scoped, which means you may access them only inside the block (two curly brackets) in which they are specified.</p>
+                </li>
+                <li>
+                    <p>Let variables are not hoisted in the same manner as var. The interpreter gets to the declaration before the variable is initialized, even though they are hoisted.</p>
+                </li>
+            </ul>
+            <b>CONST:</b>
+            <ul>
+                <li>
+                    <p>Variables that are declared with 'const' are also block-scoped.</p>
+                </li>
+                <li>
+                    <p>When using 'const' with objects or arrays, the reference is also a constant, but the properties or elements inside the object or array can still be modified.</p>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b>Tell us the use cases of null and undefined</b></button>
+        <div class="panel">
+            <p>In JavaScript, 'null' and 'undefined' are special values that represent the absence of a meaningful value.</p>
+            <b>NULL:</b>
+            <ul>
+                <li>
+                    <p>Null is typically used as an intentional absence of any object value.</p>
+                </li>
+                <li>
+                    <p>It can be assigned to a variable to indicate that it has no meaningful value or that it has been explicitly set to nothing.</p>
+                </li>
+            </ul>
+            <b>UNDEFINED:</b>
+            <ul>
+                <li>
+                    <p>It indicates that a variable has been declared but has not been assigned a value.</p>
+                </li>
+                <li>
+                    <p>Variables which have not been initialized are automatically assigned to 'undefined'.</p>
+                </li>
+            </ul>
+        </div>
+
+        <button class="accordion"><b>What do you mean by REST API?</b></button>
+        <div class="panel">
+            <p>REST API stands for Representational State Transfer Application Programming Interface. It is an architectural style for designing networked applications. It indicates that a variable has been declared but has not been assigned a value.</p>
+            <p>REST API provides a set of rules for building web services that are scalable, stateless, can easily be consumed by various clients, which makes it a popular choice for web development.</p>
+        </div>
+    </div>
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+        for (i = 0; i < acc.length; i++) {
+          acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.maxHeight) {
+              panel.style.maxHeight = null;
+            } else {
+              panel.style.maxHeight = panel.scrollHeight + "px";
+            }
+          });
+        }
+    </script>
+    <script src="./project.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH Tube</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+    <header class="header-container d-md-flex">
+        <div class="logo-container img-fluid w-auto">
+            <a href="index.html"><img src="./img/Logo.png" alt="phtube"></a>
+        </div>
+        <div class="sort-by-view d-flex w-auto">
+            <button class="sort-button d-block" onclick="sortByView()">Sort by view</button>
+        </div>
+        <div class="blog-container d-flex w-auto">
+            <button class="blog-button bg-danger">
+                <a href="blog.html" target="_blank" style="text-decoration: none; color: rgb(255, 255, 255);">Blog</a>
+            </button>
+        </div>
+    </header>
+    <hr style="width: auto; margin-left: 40px; margin-right: 40px;">
+    <div class="catagories d-flex">
+        <button onclick="loadData(1000)" class="catagory-btn active">All</button>
+        <button onclick="loadData(1001)" class="catagory-btn">Music</button>
+        <button onclick="loadData(1003)" class="catagory-btn">Comedy</button>
+        <button onclick="loadData(1005)" class="catagory-btn">Drawing</button>
+    </div>
+    <div id="videos-container" class="container-fluid"></div>
+
+
+    <script src="./project.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
+
